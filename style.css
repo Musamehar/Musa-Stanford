@@ -1,0 +1,356 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+   
+    line-height: 1.6;
+}
+
+/* Header styles */
+header{
+    position: fixed;
+    width: 100vw;
+}
+.top-nav {
+    background-color: #8c1515;
+    padding: 5px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+}
+.top-nav h1{
+    color: white;
+}
+.top-nav .links{
+    display: flex;
+    gap: 20px;
+    
+}
+.top-nav ul {
+    font-family: 'Source Sans Pro',sans-serif;
+    display: flex;
+    list-style: none;
+    gap: 20px;
+}
+
+.top-nav a {
+    color: white;
+    text-decoration: none;
+    font-size: 15px;
+    position: relative;
+}
+.top-nav a::after{
+    content: "";
+    width: 0;
+    height: 2px;
+    background-color: white;
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    opacity: 0;
+transition: 0.3s ease width;
+}
+
+
+.top-nav ul a:hover::after{
+    opacity: 1;
+    width: 100%;
+}
+
+.search input {
+    padding: 5px 10px;
+    border: none;
+    border-radius: 3px;
+    width: 65px;
+    }
+
+.search button {
+    padding: 5px 10px;
+    background: #2e2d29;
+    color: white;
+    border: none;
+    border-radius: 3px;
+    margin-left: 5px;
+    cursor: pointer;
+}
+
+.main-header {
+    background: white;
+    padding: 10px 20px;
+    text-align: center;
+    border-bottom: 1px solid #e3e3e3;
+    font-family: 'Source Sans Pro',sans-serif;
+}
+
+.main-nav ul {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    gap: 30px;
+}
+
+.main-nav a {
+    color: #2e2d29;
+    text-decoration: none;  
+    font-size: 20px;
+    position: relative;
+    
+}
+.main-nav a::after{
+    content: "";
+    width: 0;
+    height: 2px;
+    background-color: black;
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    opacity: 0;
+    transition: 0.4s ease width;
+}
+.main-nav a:hover::after{
+    opacity:  1 ;
+    width: 100%;
+}
+
+/* Hero section */
+.hero {
+    background-image: url('https://www.stanford.edu/wp-content/uploads/2023/10/Hero-3-2-1499x997.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    height: 500px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+}
+
+.hero-content {
+    max-width: 800px;
+    padding: 20px;
+}
+
+.hero h2 {
+    font-size: 110.98px;
+    margin-bottom: 20px;
+    font-weight: lighter;
+}
+.sectionTheme{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    padding: 40px 30px;
+    gap: 20px;
+}
+.sectionTheme h3{
+    font-weight: bolder;
+    font-family: sans-serif;
+    font-size: 40px;
+}
+.sectionTheme p{
+    font-size: 26px;
+    font-family: sans-serif;
+    color: rgba(0, 0, 0, 0.781);
+    text-align: center;
+}
+.themeBtn{
+    font-size: 18px;
+    text-decoration: none;
+    padding: 8px 100px;
+    background-color: #b1040e;
+    color: white;
+    font-family: sans-serif;
+    transition: 0.2s all;
+    
+}
+.themeBtn:hover{
+    background-color: #920007;
+
+}
+.researchstat{
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+    align-items: center ;
+    width: 60%;
+    margin: 20px 0;
+    border: 1px solid black;
+    border-left: 0px;
+    border-right: 0px;
+}
+.researchstat h5{
+    font-size: 25px;
+    font-weight: bold;
+}
+.researchstat p{
+    font-size: 15px;
+}
+/* News grid */
+.news-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    padding: 50px 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.news-item {
+    background: white;
+    border-radius: 5px;
+    overflow: hidden;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.news-item img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+
+.news-item h3 {
+    padding: 20px;
+    font-size: 16px;
+    color: #8c1515;
+}
+
+.news-item p {
+    padding: 0 20px 20px;
+    font-size: 16px;
+}
+.socialLinks{
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    font-size: 40px;
+
+}
+.socialLinks svg{
+    cursor: pointer;
+color: rgba(0, 0, 0, 0.61);
+
+}
+.socialLinks svg:nth-child(1):hover{
+    color: rgb(7, 7, 207);
+    transition: 0.2s all;
+}
+.socialLinks svg:nth-child(2):hover{
+    color: rgba(0, 0, 255, 0.973);
+    transition: 0.2s all;
+}
+.socialLinks svg:nth-child(3):hover{
+    color: rgb(243, 8, 117);
+    transition: 0.2s all;
+}
+.socialLinks svg:nth-child(4):hover{
+    color: rgb(8, 8, 168);
+    transition: 0.2s all;
+}
+.socialLinks svg:nth-child(5):hover{
+    color: red;
+    transition: 0.2s all;
+}
+.socialLinks svg:nth-child(6):hover{
+    color: black;
+    transition: 0.2s all;
+}
+
+
+/* Footer */
+footer {
+   background: white;
+    color: black;
+    padding: 50px 0px 0px;
+}
+
+.footer-content {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.footer-section h4 {
+    margin-bottom: 20px;
+    font-size: 18px;
+}
+
+.footer-section ul {
+    list-style: none;
+}
+
+.footer-section a {
+    color: black;
+    text-decoration: none;
+    line-height: 2;
+}
+
+.footer-bottom {
+    background-color: #8c1515;
+    color: white !important;
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    padding-left: 60px;
+    margin-top: 50px;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    border-top: 1px solid rgba(255,255,255,0.1);
+}
+.footer-bottom a{
+    text-decoration: none;
+    color: white !important;
+}
+.footer-bottom span{
+    font-size: 25px;
+}
+.footerLinks {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    
+}
+.footerLinks ul{
+    /* width: 100px; */
+}
+.footerLinks li{
+    float: left;
+    list-style-type: none;
+    margin-right: 10px;
+}
+.footerLinks li a:hover{
+    text-decoration: underline;
+}
+/* Responsive design */
+@media (max-width: 768px) {
+    .news-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .footer-content {
+        grid-template-columns: 1fr;
+    }
+
+    .main-nav ul {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .top-nav {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .hero h2 {
+        font-size: 32px;
+    }
+}
